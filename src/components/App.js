@@ -13,7 +13,7 @@ function App() {
   }, []);
 
   return (
-    <main className="box-border">
+    <main>
       <Header />
       {Object.keys(currentStories.length !== 0) && (
         <AllStoriesContainer stories={currentStories} />
