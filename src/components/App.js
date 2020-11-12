@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import AllStoriesContainer from "./AllStoriesContainer";
 
+import AllStoriesContainer from "./AllStoriesContainer";
 import Header from "./Header";
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
   }, []);
 
   return (
-    <main>
+    <main className="box-border">
       <Header />
       {Object.keys(currentStories.length !== 0) && (
         <AllStoriesContainer stories={currentStories} />
