@@ -13,7 +13,7 @@ function App() {
   }, []);
 
   return (
-    <main>
+    <main className="bg-yellow-100">
       <Header />
       {Object.keys(currentStories.length !== 0) && (
         <AllStoriesContainer stories={currentStories} />
