@@ -4,15 +4,17 @@ import moment from "moment";
 export default function Stories(props) {
   const regEx = /^(?:https?:\/\/)?(?:[^@/\n]+@)?(?:www.)?([^:/?\n]+)/gim;
   return (
-    <article className="p-2 border-t border-black md:border-gray-800">
+    <article className="p-2 lg:p-4 border-t border-black md:border-gray-800 hover:bg-orange-100">
       <div className="flex flex-wrap">
         <a href={props.story.url}>
           <span className="mr-1 shadow-inner bg-opacity-0">
             {props.story.title}
           </span>
-          <span className="text-xs text-gray-600">
-            ({props.story.url.match(regEx)})
-          </span>
+          {props.story.url !== null && (
+            <span className="text-xs text-gray-600">
+              ({props.story.url.match(regEx)})
+            </span>
+          )}
         </a>
       </div>
       <div className="flex flex-wrap w-full text-xs">
