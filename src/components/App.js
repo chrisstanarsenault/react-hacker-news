@@ -1,3 +1,8 @@
+// ToDo: fix infinite scroll so it respects being the final page and not make calls
+// ToDo: see why when searching a topic, it loads multiple pages in one call
+// ToDo: link author and bring up stories they have written
+// ToDo: link comments and bring up comments for related story
+
 import React, {
   useState,
   useEffect,
@@ -61,6 +66,7 @@ function App() {
         });
       }).observe(node);
     },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     [pagerDispatch]
   );
 
