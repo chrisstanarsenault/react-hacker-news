@@ -40,7 +40,7 @@ function App() {
     setCurrentStories([]);
     // setIsLoading(true);
     await fetch(
-      `http://hn.algolia.com/api/v1/search?query=${input}&page=${pager.page}`
+      `https://hn.algolia.com/api/v1/search?query=${input}&page=${pager.page}`
     )
       .then((res) => res.json())
       .then((data) => {
@@ -74,7 +74,7 @@ function App() {
     const getFrontPageData = async (page) => {
       setIsLoading(true);
       await fetch(
-        `http://hn.algolia.com/api/v1/search?tags=front_page&page=${page}&hitsPerPage=10`
+        `https://hn.algolia.com/api/v1/search?tags=front_page&page=${page}&hitsPerPage=10`
       )
         .then((res) => res.json())
         .then((data) => {
