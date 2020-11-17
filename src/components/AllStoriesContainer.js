@@ -9,7 +9,7 @@ export default function AllStoriesContainer(props) {
     <section className="flex flex-col">
       {Object.keys(stories).length !== 0 &&
         stories.map((story) => <Story key={story.objectID} story={story} />)}
-      <div className="border-t-2 border-red-400" ref={boundaryRef}></div>
+      <div ref={boundaryRef}></div>
     </section>
   );
 }
